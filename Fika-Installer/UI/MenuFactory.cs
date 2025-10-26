@@ -19,23 +19,23 @@ namespace Fika_Installer.UI
             {
                 UpdateFikaPage updateFikaPage = new(installDir);
 
-                MenuChoice updateFikaChoice = new("Update Fika", updateFikaPage);
+                MenuChoice updateFikaChoice = new("更新Fika模组", updateFikaPage);
                 mainMenuChoices.Add(updateFikaChoice);
 
                 UninstallFikaPage uninstallFikaPage = new(this, installDir);
 
-                MenuChoice uninstallFikaChoice = new("Uninstall Fika", uninstallFikaPage);
+                MenuChoice uninstallFikaChoice = new("卸载Fika", uninstallFikaPage);
                 mainMenuChoices.Add(uninstallFikaChoice);
             }
             else
             {
                 InstallFikaPage installFikaPage = new(installDir);
 
-                MenuChoice installFikaChoice = new("Install Fika", installFikaPage);
+                MenuChoice installFikaChoice = new("安装Fika", installFikaPage);
                 mainMenuChoices.Add(installFikaChoice);
             }
 
-            MenuChoice advancedChoice = new("Advanced Options", CreateAdvancedOptionsMenu());
+            MenuChoice advancedChoice = new("更多选项", CreateAdvancedOptionsMenu());
             mainMenuChoices.Add(advancedChoice);
 
             Menu mainMenu = new(mainMenuChoices);
@@ -53,14 +53,14 @@ namespace Fika_Installer.UI
             {
                 UpdateFikaHeadlessPage updateFikaHeadlessPage = new(installDir);
 
-                MenuChoice updateFikaHeadlessChoice = new("Update Fika Headless", updateFikaHeadlessPage);
+                MenuChoice updateFikaHeadlessChoice = new("更新Fika Headless", updateFikaHeadlessPage);
                 advancedMenuChoices.Add(updateFikaHeadlessChoice);
             }
             else
             {
                 InstallFikaHeadlessPage installFikaHeadlessPage = new(this, installDir);
 
-                MenuChoice installFikaHeadlessChoice = new("Install Fika Headless", installFikaHeadlessPage);
+                MenuChoice installFikaHeadlessChoice = new("安装Fika Headless", installFikaHeadlessPage);
                 advancedMenuChoices.Add(installFikaHeadlessChoice);
             }
 
@@ -70,7 +70,7 @@ namespace Fika_Installer.UI
             {
                 InstallFikaCurrentDirPage installFikaCurrentDirPage = new(this, installDir);
 
-                MenuChoice installFikaInCurrentFolder = new("Install Fika in current folder", installFikaCurrentDirPage);
+                MenuChoice installFikaInCurrentFolder = new("在当前文件夹下安装Fika", installFikaCurrentDirPage);
                 advancedMenuChoices.Add(installFikaInCurrentFolder);
             }
 
@@ -92,10 +92,10 @@ namespace Fika_Installer.UI
                 profileSelectionMenuChoices.Add(menuChoice);
             }
 
-            MenuChoice createNewHeadlessProfile = new("Create a new headless profile", "createNewHeadlessProfile");
+            MenuChoice createNewHeadlessProfile = new("创建一个新的headless profile", "createNewHeadlessProfile");
             profileSelectionMenuChoices.Add(createNewHeadlessProfile);
 
-            Menu profileSelectionMenu = new("Please choose the headless profile to use for your headless client:", profileSelectionMenuChoices);
+            Menu profileSelectionMenu = new("选择headless客户端使用的headless profile:", profileSelectionMenuChoices);
 
             return profileSelectionMenu;
         }
@@ -112,7 +112,7 @@ namespace Fika_Installer.UI
                 choices.Add(choice);
             }
 
-            Menu installMethodMenu = new("Please choose your installation method. This will determine how the SPT folder will be copied.", choices);
+            Menu installMethodMenu = new("选择安装方法，该选择会影响复制SPT文件夹的操作方法。", choices);
 
             return installMethodMenu;
         }
@@ -127,7 +127,7 @@ namespace Fika_Installer.UI
             MenuChoice choiceNo = new("No");
             choices.Add(choiceNo);
 
-            Menu uninstallFikaMenu = new("Are you sure you want to uninstall Fika? Your Fika settings will be lost.", choices);
+            Menu uninstallFikaMenu = new("确认要卸载Fika吗？卸载后Fika的设置将会丢失。", choices);
 
             return uninstallFikaMenu;
         }
