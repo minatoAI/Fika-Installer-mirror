@@ -25,10 +25,10 @@ namespace Fika_Installer
 
     public static class FikaReleaseLists
     {
-        private static readonly FikaRelease _fikaCoreRelease = new("Fika.Release", "https://gh.llkk.cc/https://api.github.com/repos/project-fika/Fika-Plugin/releases/latest");
-        private static readonly FikaRelease _fikaHeadlessRelease = new("Fika.Headless", "https://gh.llkk.cc/https://api.github.com/repos/project-fika/Fika-Headless/releases/latest");
-        private static readonly FikaRelease _fikaServerRelease = new("Fika.Server", "https://gh.llkk.cc/https://api.github.com/repos/project-fika/Fika-Server-CSharp/releases/latest");
-        private static readonly FikaRelease _fikaHeadlessManagerRelease = new("Fika.Headless.Manager", "https://gh.llkk.cc/https://api.github.com/repos/project-fika/Fika-Headless-Manager/releases/latest");
+        private static readonly FikaRelease _fikaCoreRelease = new("Fika.Release", "https://gh-proxy.com/https://api.github.com/repos/project-fika/Fika-Plugin/releases/latest");
+        private static readonly FikaRelease _fikaHeadlessRelease = new("Fika.Headless", "https://gh-proxy.com/https://api.github.com/repos/project-fika/Fika-Headless/releases/latest");
+        private static readonly FikaRelease _fikaServerRelease = new("Fika.Server", "https://gh-proxy.com/https://api.github.com/repos/project-fika/Fika-Server-CSharp/releases/latest");
+        private static readonly FikaRelease _fikaHeadlessManagerRelease = new("Fika.Headless.Manager", "https://gh-proxy.com/https://api.github.com/repos/project-fika/Fika-Headless-Manager/releases/latest");
 
         public static readonly List<FikaRelease> StandardFika =
         [
